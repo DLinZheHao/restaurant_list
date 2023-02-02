@@ -15,7 +15,8 @@
 
 ### 環境設定
 #### 環境變數儲存在 config.env
-
+    
+    // 插件 .prettierrc (vscode 插件
     // nodemon 安裝
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
