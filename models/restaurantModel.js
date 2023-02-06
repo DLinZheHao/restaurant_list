@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const restaurantSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+  },
   name: {
     type: String,
     required: [true, '請輸入餐廳名字'],

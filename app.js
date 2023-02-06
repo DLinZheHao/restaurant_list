@@ -3,16 +3,19 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 const app = express();
 
 const dotenv = require('dotenv');
 const exphbs = require('express-handlebars');
-const viewRoutes = require('./routes/viewRoutes');
 
+const viewRoutes = require('./routes/viewRoutes');
+const listRoutes = require('./routes/listRoutes');
 // 引用環境變數 （一般不會git上去）
 //dotenv.config({ path: './config.env' });
 
+app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // view template setting
@@ -59,7 +62,7 @@ db.once('open', () => {
 });
 
 app.use('/', viewRoutes);
-
+app.use('/', listRoutes);
 app.listen(process.env.PORT, () => {
   console.log(`listening on port ${process.env.PORT}!`);
 });
