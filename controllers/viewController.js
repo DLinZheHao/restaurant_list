@@ -1,9 +1,9 @@
 const fs = require('fs');
 
 // read restaurant.json from dev-data
-const restaurant_List = JSON.parse(
-  fs.readFileSync(`./dev-data/restaurant.json`, 'utf-8')
-);
+// const restaurant_List = JSON.parse(
+//   fs.readFileSync(`./dev-data/restaurant.json`, 'utf-8')
+// );
 
 exports.index_page = (req, res) => {
   res
