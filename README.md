@@ -10,6 +10,9 @@
     <li>瀏覽餐廳名單</li>
     <li>搜尋餐廳並顯示</li>
     <li>查看個別餐廳資訊</li>
+    <li>編輯餐廳資訊</li>
+    <li>刪除餐廳</li>
+    <li>新增餐廳</li>
     <li>點擊icon連接至地圖</li>
 </ul>
 
@@ -18,9 +21,12 @@
     
     // 插件 .prettierrc (vscode 插件
     // nodemon 安裝
+    "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.9.0"
 
 ### 使用方式
 1.將專案 clone 至本地端
